@@ -32,6 +32,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -47,11 +50,13 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    //Room
     val room_version = "2.6.0"
-
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
-
-    // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+
+    //Koin
+    implementation("io.insert-koin:koin-android:3.4.3")
 }

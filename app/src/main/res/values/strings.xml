@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TestTask</string>
+    <string name="submit">Submit</string>
+    <string name="invalid_format_error">Invalid date or time format!</string>
+    <string name="fetch_data_error">Error fetching data from server</string>
+    <string name="datetime_after_current_error">Selected time and date must be in the past!</string>
+    <string name="generic_error">Something went wrong</string>
 </resources>
